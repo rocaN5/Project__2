@@ -1,0 +1,263 @@
+.cards{
+    width: 100%;
+    display: flex;
+    background: linear-gradient(180deg, #013A51 0%, #000000 100%);
+    justify-content: center;
+
+    &__holder{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        margin: 90px 0px;
+
+        @media screen and (max-width: 1100px){
+            display: block;
+            margin-top: 45px;
+            margin-bottom: 45px;
+            width: 60%;
+        }
+        @media screen and (max-width: 792px){
+            width: 80%;
+        }
+
+        .card:nth-last-child(1){
+            margin-bottom: 0;
+        }
+
+        .card{
+            width: 25vw;
+            background: #262626;
+            border-radius: 25px;
+            border-top: 2px solid;
+            border-left: 2px solid;
+            border-color: #ffffff80;
+            overflow: hidden;
+            box-shadow: 4px 4px 10px 0px #000;
+
+            @media screen and (max-width: 1100px){
+                width: 100%;
+                display: flex;
+                margin-bottom: 50px;
+            }
+
+            &__img__title{
+                width: 100%;
+                height: 40vh;
+                background: linear-gradient(121.17deg, rgba(1, 0, 236, 0.6) 0%, rgba(251, 54, 244, 0.6) 100%), url('../img/cards/background__card__1.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                justify-content: end;
+                align-items: center;
+                display: flex;
+                flex-flow: column;
+                
+                @media screen and (max-width: 1200px){
+                    height: 30vh;
+                }
+
+                @media screen and (max-width: 1100px){
+                    height: unset;
+                }
+
+                &__transition{
+                    position: relative;
+                    width: 100%;
+                    height: 60px;
+                    background-image: url("../img/cards/line.svg");
+                    background-repeat: no-repeat;
+                    background-position: 0;
+                    background-size: 100%;
+                    transform: translateY(15px);
+
+                    @media screen and (max-width: 1100px){
+                        background-image: unset;
+                    }
+
+                    &:before{
+                        content: 'Developers';
+                        display: block;
+                        position: absolute;
+                        font-family: 'Roboto-regular';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 35px;
+                        line-height: 41px;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        margin-bottom: 25px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -30px;
+
+                        
+                        @media screen and (max-width: 1200px){
+                            font-size: 25px;
+                        }
+
+                        @media screen and (max-width: 1100px){
+                            text-shadow: 0 0 11px black;
+                            margin-bottom: 0;
+                            bottom: 40px;
+                        }
+
+                        @media screen and (max-width: 500px){
+                            font-size: 19px;
+                        }
+
+                        @media screen and (max-width: 400px){
+                            font-size: 14px;
+                        }
+                    }
+
+                    &:after{
+                        content:'';
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background: linear-gradient(90deg, rgba(251, 54, 244, 0.6) 0%, rgba(1, 0, 236, 0.6) 100%);
+                        bottom: -10px;
+                        @media screen and (max-width: 1100px){
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &__text{    
+                margin-top: 22px;
+                width: 100%;
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+                align-items: center;
+
+                @media screen and (max-width: 525px){
+                    padding-top: 0px;
+                }
+
+                &__holder{
+                    width: 80%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    flex-flow: column;
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+
+                    @media screen and (max-width: 525px){
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+
+                    p{
+                        font-family: 'Roboto-regular';
+                        font-style: normal;
+                        font-weight: 100;
+                        font-size: 28px;
+                        text-align: center;
+                        color: #fff;
+
+                        @media screen and (max-width: 1700px){
+                            font-size: 19px;
+                        }
+                        
+                        @media screen and (max-width: 1200px){
+                            font-size: 16px;
+                        }
+
+                        @media screen and (max-width: 525px){
+                            font-size: 14px;
+                            text-align: justify;
+                        }
+                    }
+                }
+
+                &__link{    
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 25px;
+
+                    @media screen and (max-width: 525px){
+                        padding-bottom: 10px;
+                    }
+
+                    a{
+                        position: relative;
+                        display: block;
+                        background: #414141;
+                        border-radius: 15px;
+                        font-family: 'Roboto-regular';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 29px;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        text-decoration: none;
+                        padding: 10px 50px;
+                        white-space: nowrap;
+                        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+                        transition: 300ms;
+
+                        @media screen and (max-width: 1200px){
+                            font-size: 18px;
+                        }
+
+                        @media screen and (max-width: 600px){
+                            font-size: 16px;
+                            padding: 8px 25px;
+                        }
+
+                        @media screen and (max-width: 525px){
+                            font-size: 14px;
+                            padding: 4px 5vw;
+                        }
+
+                        &:hover{
+                            transition: 300ms;
+                            background: #545454;
+                            transform: translateY(2px);
+                            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+                }
+            }
+        }
+
+        #card_2{
+            .card__img__title{
+                background: linear-gradient(121.17deg, rgba(0, 192, 204, 0.6) 0%, rgba(248, 160, 23, 0.6) 100%), url("../img/cards/background__card__2.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .card__img__title__transition:before{
+                content: 'townhomes';
+            }
+            .card__img__title__transition:after{
+                background: linear-gradient(121.17deg, rgba(248, 160, 23, 0.6) 0%, rgba(0, 192, 204, 0.6) 100%);
+            }
+
+        }
+        #card_3{
+            .card__img__title{
+                background: linear-gradient(121.17deg, rgba(248, 146, 206, 0.6) 0%, rgba(67, 234, 224, 0.6) 100%), url("../img/cards/background__card__3.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .card__img__title__transition:before{
+                content: 'guarantees';
+            }
+            .card__img__title__transition:after{
+                background: linear-gradient(121.17deg, rgba(67, 234, 224, 0.6) 0%, rgba(248, 146, 206, 0.6) 100%);
+            }
+        }
+    }
+}

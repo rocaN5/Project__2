@@ -1,0 +1,57 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'header';
+@import 'footer';
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+html{
+    overflow-y: overlay;
+    overflow-x: unset;
+	scroll-behavior: smooth;
+}
+
+body,
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+	background-color: #101010;
+}
+
+body.overflow__active{
+	overflow: hidden;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #a72767;
+	border-radius: 16px;
+	transition: 300ms;
+
+	&:hover{
+		color: #545454;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+  }
+
+@import 'menu';
+@import 'first__screen';
+@import 'about__us';
+@import 'resent__projects';
+@import 'cards';
+
